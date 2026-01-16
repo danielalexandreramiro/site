@@ -1,0 +1,19 @@
+{
+  "cidades": [
+    {
+      "id": "recife",
+      "nome": "Recife",
+      "tipos": {
+        "praia": [
+          {
+            "nome": "Praia de Boa Viagem",
+            "descricao": "Praia urbana com calçadão e quiosques.",
+            "lat": -8.1203,
+            "lng": -34.8946,
+            "foto": "assets/images/boa-viagem.jpg"
+          }
+        ]
+      }
+    }
+  ]
+}
