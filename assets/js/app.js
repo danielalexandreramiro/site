@@ -86,3 +86,11 @@ function carregarDestinos() {
       .bindPopup(l.nome);
   });
 }
+// Topbar com botão Home
+const topbar = document.getElementById('topbar');
+
+if (topbar) {
+  topbar.innerHTML = `
+    <a href="index.html" class="home-icon">🏠</a>
+  `;
+}

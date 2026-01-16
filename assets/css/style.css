@@ -146,3 +146,30 @@ button {
     margin: 24px auto;
   }
 }
+
+/* TOP BAR */
+#topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 1000;
+}
+
+.home-icon {
+  font-size: 22px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* COMPENSA TOPO FIXO */
+body {
+  padding-top: 72px;
+}
+

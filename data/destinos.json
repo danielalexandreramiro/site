@@ -10,7 +10,82 @@
             "descricao": "Praia urbana com calçadão e quiosques.",
             "lat": -8.1203,
             "lng": -34.8946,
-            "foto": "assets/images/boa-viagem.jpg"
+            "foto": "assets/images/recife/boa-viagem.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "conde",
+      "nome": "Conde",
+      "tipos": {
+        "praia": [
+          {
+            "nome": "Praia de Tabatinga I",
+            "descricao": "Praia em meio de reserva.",
+            "lat": -8.1203,
+            "lng": -34.8946,
+            "foto": "assets/images/conde/tabatinga1.jpg"
+          },
+            {
+                "nome": "Praia de Tabatinga II",
+                "descricao": "Praia com barracas e quiosques.",
+                "lat": -8.1203,
+                "lng": -34.8946,
+                "foto": "assets/images/conde/tabatinga2.jpg"
+            },
+            {
+                "nome": "Praia do Coqueirinho",
+                "descricao": "Praia com falésias e coqueiros.",
+                "lat": -8.1203,
+                "lng": -34.8946,
+                "foto": "assets/images/conde/coqueirinho.jpg"
+            },
+            {
+                "nome": "Praia de Jacumã",
+                "descricao": "Praia com piscinas naturais.",
+                "lat": -8.1203,
+                "lng": -34.8946,
+                "foto": "assets/images/conde/jacuma.jpg"
+            }
+        ],
+        "passeio": [
+          {
+            "nome": "Passeio de Buggy",
+            "descricao": "Passeio de buggy pelas praias da região.",
+            "lat": -8.1203,
+            "lng": -34.8946,
+            "foto": "assets/images/conde/buggy.jpg"
+          },
+          {
+            "nome": "Trilha Ecológica",
+            "descricao": "Caminhada por trilhas na mata atlântica.",
+            "lat": -8.1203,
+            "lng": -34.8946,
+            "foto": "assets/images/conde/trilha.jpg"
+          },
+          {
+            "nome": "Visita à Vila de Pescadores",
+            "descricao": "Conheça a cultura local visitando a vila de pescadores.",
+            "lat": -8.1203,
+            "lng": -34.8946,
+            "foto": "assets/images/conde/vila-pescadores.jpg"
+          }
+        ],
+         "restaurantes": [
+          {
+            "nome": "Restaurante Mar e Terra",
+            "descricao": "Culinária regional com frutos do mar frescos.",
+            "lat": -8.1203,
+            "lng": -34.8946,
+            "foto": "assets/images/conde/restaurante-mar-e-terra.jpg"
+          },
+          {
+            "nome": "Restaurante Turek",
+            "descricao": "Comida típica nordestina em ambiente acolhedor.",
+            "lat": -8.1203,
+            "lng": -34.8946,
+            "foto": "assets/images/conde/restaurante-turek.jpg"
           }
         ]
       }
