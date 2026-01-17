@@ -5,7 +5,8 @@ fetch('data/destinos.json')
   .then(json => {
     dados = json;
     iniciar();
-  });
+  })
+  .catch(err => console.error('Erro ao carregar JSON:', err));
 
 function iniciar() {
   if (document.getElementById('cidadeSelect')) carregarCidades();
@@ -25,10 +26,11 @@ function carregarCidades() {
     select.appendChild(opt);
   });
 
-  document.getElementById('btnCidade').onclick = () => {
-    if (select.value)
-      window.location.href = `cidade.html?cidade=${select.value}`;
-  };
+  select.addEventListener('change', (e) => {
+    if (e.target.value) {
+      window.location.href = `cidade.html?cidade=${e.target.value}`;
+    }
+  });
 }
 
 /* CIDADE */
@@ -37,6 +39,11 @@ function carregarTipos() {
   const cidadeId = params.get('cidade');
 
   const cidade = dados.cidades.find(c => c.id === cidadeId);
+  if (!cidade) {
+    console.error('Cidade não encontrada:', cidadeId);
+    return;
+  }
+
   document.getElementById('tituloCidade').textContent =
     `O que fazer em ${cidade.nome}?`;
 
@@ -46,7 +53,7 @@ function carregarTipos() {
     const card = document.createElement('a');
     card.className = 'card';
     card.href = `destinos.html?cidade=${cidadeId}&tipo=${tipo}`;
-    card.textContent = tipo.toUpperCase();
+    card.textContent = tipo.charAt(0).toUpperCase() + tipo.slice(1);
     container.appendChild(card);
   });
 }
@@ -58,10 +65,19 @@ function carregarDestinos() {
   const tipo = params.get('tipo');
 
   const cidade = dados.cidades.find(c => c.id === cidadeId);
+  if (!cidade) {
+    console.error('Cidade não encontrada:', cidadeId);
+    return;
+  }
+
   const lista = cidade.tipos[tipo];
+  if (!lista) {
+    console.error('Tipo não encontrado:', tipo);
+    return;
+  }
 
   document.getElementById('tituloDestino').textContent =
-    `${tipo.toUpperCase()} em ${cidade.nome}`;
+    `${tipo.charAt(0).toUpperCase() + tipo.slice(1)} em ${cidade.nome}`;
 
   const container = document.getElementById('listaDestinos');
 
@@ -71,7 +87,7 @@ function carregarDestinos() {
     card.style.cursor = 'pointer';
     
     card.innerHTML = `
-      <img src="${l.foto}">
+      <img src="${l.foto}" alt="${l.nome}">
       <div class="conteudo">
         <h2>${l.nome}</h2>
         <p>${l.descricao}</p>
@@ -79,61 +95,12 @@ function carregarDestinos() {
     
     container.appendChild(card);
     
-    // Clique no card abre detalhes
     card.onclick = () => {
       const nomeEncoded = encodeURIComponent(l.nome);
       window.location.href = `detalhes.html?cidade=${cidadeId}&tipo=${tipo}&destino=${nomeEncoded}`;
     };
   });
 }
-
-/* DETALHES - COM MAPA */
-function carregarDetalhes() {
-  const params = new URLSearchParams(window.location.search);
-  const cidadeId = params.get('cidade');
-  const tipo = params.get('tipo');
-  const nomeDestino = decodeURIComponent(params.get('destino'));
-
-  const cidade = dados.cidades.find(c => c.id === cidadeId);
-  const lista = cidade.tipos[tipo];
-  const destino = lista.find(d => d.nome === nomeDestino);
-
-  const container = document.getElementById('conteudoDetalhes');
-  container.className = 'detalhes-container';
-  container.innerHTML = `
-    <div class="detalhes-header">
-      <img src="${destino.foto}">
-    </div>
-    <div class="detalhes-info">
-      <h1>${destino.nome}</h1>
-      <p>${destino.descricao}</p>
-    </div>
-    <div id="mapaDetalhes"></div>
-  `;
-
-  // Inicializar mapa
-  setTimeout(() => {
-    const mapa = L.map('mapaDetalhes');
-    mapa.setView([destino.lat, destino.lng], 15);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
-      .addTo(mapa);
-    L.marker([destino.lat, destino.lng])
-      .addTo(mapa)
-      .bindPopup(destino.nome);
-  }, 100);
-}
-
-// Topbar com botão Home
-const topbar = document.getElementById('topbar');
-
-if (topbar) {
-  topbar.innerHTML = `
-    <a href="index.html" class="home-icon">🏠</a>
-  `;
-}
-
-
-// ...existing code...
 
 /* DETALHES - COM MAPA E FOTOS */
 function carregarDetalhes() {
@@ -142,9 +109,26 @@ function carregarDetalhes() {
   const tipo = params.get('tipo');
   const nomeDestino = decodeURIComponent(params.get('destino'));
 
+  console.log('Carregando detalhes:', { cidadeId, tipo, nomeDestino });
+
   const cidade = dados.cidades.find(c => c.id === cidadeId);
+  if (!cidade) {
+    console.error('Cidade não encontrada:', cidadeId);
+    return;
+  }
+
   const lista = cidade.tipos[tipo];
+  if (!lista) {
+    console.error('Tipo não encontrado:', tipo);
+    return;
+  }
+
   const destino = lista.find(d => d.nome === nomeDestino);
+  if (!destino) {
+    console.error('Destino não encontrado:', nomeDestino);
+    console.log('Destinos disponíveis:', lista.map(d => d.nome));
+    return;
+  }
 
   const container = document.getElementById('conteudoDetalhes');
   container.className = 'detalhes-container';
@@ -160,7 +144,7 @@ function carregarDetalhes() {
             <div class="info-foto">
               <p class="descricao-foto">${foto.descricao}</p>
               <div class="detalhes-foto">
-                <span class="preco">R$ ${foto.preco}</span>
+                ${foto.preco !== '0' ? `<span class="preco">R$ ${foto.preco}</span>` : ''}
                 <span class="dificuldade">${foto.dificuldade}</span>
                 <span class="avaliacao">${gerarEstrelas(foto.avaliacao)}</span>
               </div>
@@ -183,7 +167,6 @@ function carregarDetalhes() {
     <div id="mapaDetalhes"></div>
   `;
 
-  // Inicializar mapa
   setTimeout(() => {
     const mapa = L.map('mapaDetalhes');
     mapa.setView([destino.lat, destino.lng], 15);
@@ -197,15 +180,9 @@ function carregarDetalhes() {
 
 /* FUNÇÃO PARA GERAR ESTRELAS */
 function gerarEstrelas(avaliacao) {
-  const estrelaCheia = '⭐';
-  const meia = avaliacao % 1 !== 0 ? '⭐' : '';
   const total = Math.floor(avaliacao);
-  return estrelaCheia.repeat(total) + meia;
+  return '⭐'.repeat(total);
 }
-
-// ...existing code...
-
-// ...existing code...
 
 // HAMBURGER MENU
 const hamburger = document.getElementById('hamburger');
@@ -217,7 +194,6 @@ if (hamburger) {
     navMenu.classList.toggle('active');
   });
 
-  // Fechar menu ao clicar em um link
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
@@ -225,5 +201,3 @@ if (hamburger) {
     });
   });
 }
-
-// ...existing code...

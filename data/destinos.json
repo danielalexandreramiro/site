@@ -1,46 +1,6 @@
 {
   "cidades": [
-    {
-      "id": "recife",
-      "nome": "Recife",
-      "tipos": {
-        "praia": [
-          {
-            "nome": "Praia de Boa Viagem",
-            "descricao": "Praia urbana com calçadão e quiosques.",
-            "lat": -8.1203,
-            "lng": -34.8946,
-            "foto": "assets/images/recife/praia/boa-viagem.jpg",
-            "preco": "150",
-            "dificuldade": "Fácil",
-            "avaliacao": 5,
-            "fotos": [
-              {
-                "src": "assets/images/recife/praia/restaurante-mar-e-terra.jpg",
-                "descricao": "Lagosta grelhada com acompanhamentos",
-                "preco": "150",
-                "dificuldade": "Fácil",
-                "avaliacao": 5
-              },
-              {
-                "src": "assets/images/recife/praia/restaurante-mar-e-terra-2.jpg",
-                "descricao": "Prato principal - Moqueca de peixe",
-                "preco": "120",
-                "dificuldade": "Fácil",
-                "avaliacao": 5
-              },
-              {
-                "src": "assets/images/recife/praia/restaurante-mar-e-terra-3.jpg",
-                "descricao": "Sobremesa - Pavê de frutas",
-                "preco": "45",
-                "dificuldade": "Fácil",
-                "avaliacao": 4
-              }
-            ]
-          }
-        ]
-      }
-    },
+ 
     {
       "id": "conde",
       "nome": "Conde",
@@ -141,7 +101,7 @@
             },
             {
                 "nome": "Praia de Jacumã",
-                "descricao": "A Praia de Jacumã, no município do Conde (PB), é uma praia urbana e bem estruturada, conhecida pelo mar geralmente calmo, areia clara e fácil acesso. É ideal para banho, famílias e esportes aquáticos, como caiaque e stand up paddle.",
+                "descricao": "A Praia de Jacumã, no município do Conde (PB), é uma praia urbana e bem estruturada, conhecida pelo mar geralmente calmo, areia clara e fácil acesso. É ideal para banho, famílias e esportes aquáts, como caiaque e stand up paddle.",
                 "lat": -7.2654,
                 "lng": -34.809,
                 "foto": "assets/images/conde/praia/jacuma.jpg",
