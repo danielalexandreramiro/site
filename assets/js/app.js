@@ -13,6 +13,7 @@ function iniciar() {
   if (document.getElementById('tiposContainer')) carregarTipos();
   if (document.getElementById('listaDestinos')) carregarDestinos();
   if (document.getElementById('conteudoDetalhes')) carregarDetalhes();
+  if (document.getElementById('mapaCidade')) carregarMapaCidade();
 }
 
 /* HOME */
@@ -33,7 +34,7 @@ function carregarCidades() {
   });
 }
 
-/* CIDADE */
+/* CIDADE - COM MAPA */
 function carregarTipos() {
   const params = new URLSearchParams(window.location.search);
   const cidadeId = params.get('cidade');
@@ -51,11 +52,81 @@ function carregarTipos() {
 
   Object.keys(cidade.tipos).forEach(tipo => {
     const card = document.createElement('a');
-    card.className = 'card';
+    card.className = `card ${tipo.toLowerCase()}`;
     card.href = `destinos.html?cidade=${cidadeId}&tipo=${tipo}`;
     card.textContent = tipo.charAt(0).toUpperCase() + tipo.slice(1);
     container.appendChild(card);
   });
+}
+
+/* MAPA DA CIDADE */
+function carregarMapaCidade() {
+  const params = new URLSearchParams(window.location.search);
+  const cidadeId = params.get('cidade');
+
+  const cidade = dados.cidades.find(c => c.id === cidadeId);
+  if (!cidade) {
+    console.error('Cidade não encontrada');
+    return;
+  }
+
+  // Cores por tipo
+  const cores = {
+    praia: '#0066ff',
+    passeio: '#ff8c00',
+    restaurante: '#d41159',
+    Apoio: '#28a745',
+    apoio: '#28a745'
+  };
+
+  // Criar ícone customizado
+  function criarIcone(tipo) {
+    const cor = cores[tipo] || '#999';
+    return L.divIcon({
+      html: `<div style="background: ${cor}; width: 30px; height: 30px; border-radius: 50%; border: 3px solid #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 2px #333; font-size: 16px; color: #fff;">📍</div>`,
+      iconSize: [30, 30],
+      className: 'custom-icon'
+    });
+  }
+
+  // Inicializar mapa
+  const mapa = L.map('mapaCidade');
+  
+  // Coordenadas padrão (será ajustada ao adicionar marcadores)
+  mapa.setView([-7.31, -34.8], 12);
+  
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors',
+    maxZoom: 19
+  }).addTo(mapa);
+
+  // Adicionar marcadores
+  const marcadores = [];
+  
+  Object.keys(cidade.tipos).forEach(tipo => {
+    cidade.tipos[tipo].forEach(destino => {
+      const marker = L.marker([destino.lat, destino.lng], {
+        icon: criarIcone(tipo)
+      })
+        .bindPopup(`
+          <div style="text-align: center;">
+            <strong>${destino.nome}</strong><br>
+            <small>${tipo}</small>
+          </div>
+        `)
+        .addTo(mapa);
+      
+      marcadores.push([destino.lat, destino.lng]);
+    });
+  });
+
+  // Ajustar zoom para mostrar todos os marcadores
+  if (marcadores.length > 0) {
+    const group = new L.featureGroup(
+      marcadores.map(coords => L.marker(coords))
+    );
+    mapa.fitBounds(group.getBounds().pad(0.1));
+  }
 }
 
 /* DESTINOS - SEM MAPA */
@@ -144,7 +215,7 @@ function carregarDetalhes() {
             <div class="info-foto">
               <p class="descricao-foto">${foto.descricao}</p>
               <div class="detalhes-foto">
-                ${foto.preco !== '0' ? `<span class="preco">R$ ${foto.preco}</span>` : ''}
+                ${foto.preco && foto.preco !== '0' ? `<span class="preco">R$ ${foto.preco}</span>` : ''}
                 <span class="dificuldade">${foto.dificuldade}</span>
                 <span class="avaliacao">${gerarEstrelas(foto.avaliacao)}</span>
               </div>

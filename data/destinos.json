@@ -303,8 +303,7 @@
           {
             "nome": "Hospital Municipal de Conde",
             "descricao": "Restaurante especializado em frutos do mar com vista para o mar.",
-            "lat": -8.1203,
-            "lng": -34.8946,
+         
             "foto": "assets/images/conde/apoio/restaurante-mar-e-terra.jpg",
             "preco": "150",
             "dificuldade": "Fácil",

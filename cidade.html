@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tipos de destino</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
 <body>
 <nav class="navbar">
   <div class="navbar-container">
-    <a href="index.html" class="navbar-logo">Destinos</a>
+    <a href="index.html" class="navbar-logo">🏠 Destinos</a>
     <button class="hamburger" id="hamburger">
       <span></span>
       <span></span>
@@ -22,10 +24,38 @@
   </div>
 </nav>
 
-  <h1 style="text-align: center;  padding: 14px; "id="tituloCidade"></h1>
+  <h1 id="tituloCidade"></h1>
 
+  <div class="cidade-container">
+    <div class="mapa-wrapper">
+      <div id="mapaCidade"></div>
+    </div>
+
+    <div class="legenda-mapa">
+      <h3>Legenda</h3>
+      <div class="legenda-item">
+        <span class="legenda-cor praia"></span>
+        <span>Praia</span>
+      </div>
+      <div class="legenda-item">
+        <span class="legenda-cor passeio"></span>
+        <span>Passeio</span>
+      </div>
+      <div class="legenda-item">
+        <span class="legenda-cor restaurante"></span>
+        <span>Restaurante</span>
+      </div>
+      <div class="legenda-item">
+        <span class="legenda-cor apoio"></span>
+        <span>Apoio</span>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="text-align: center; padding: 20px;">Categorias</h2>
   <div class="cards" id="tiposContainer"></div>
 
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
