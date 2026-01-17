@@ -7,9 +7,22 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<div id="topbar"></div>
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="index.html" class="navbar-logo">🏠 Destinos</a>
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="#voltar" class="nav-link" onclick="window.history.back()">← Voltar</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <h1 id="tituloCidade"></h1>
+  <h1 style="text-align: center;"id="tituloCidade"></h1>
 
   <div class="cards" id="tiposContainer"></div>
 

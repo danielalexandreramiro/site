@@ -6,23 +6,157 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 16px;
+  padding: 0;
   background: #fafafa;
-  text-align: center;
+  padding-top: 60px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-logo {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-logo:hover {
+  opacity: 0.8;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 24px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  opacity: 0.8;
+  border-bottom: 2px solid #fff;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* MOBILE MENU */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 60px;
+    flex-direction: column;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding: 20px 0;
+    gap: 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    padding: 12px 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+  }
 }
 
 /* HOME */
+main {
+  padding: 16px;
+}
+
 .hero {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 16px;
+  text-align: center;
 }
 
 h1 {
   font-size: 24px;
   margin: 0;
+  color: #333;
 }
 
 p {
@@ -34,7 +168,6 @@ p {
 select, button {
   width: 100%;
   max-width: 320px;
-  margin: 0 auto;
   padding: 14px;
   font-size: 16px;
   border-radius: 10px;
@@ -42,9 +175,17 @@ select, button {
 }
 
 button {
-  background: #000;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
   border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
 /* CARDS DE TIPO */
@@ -52,31 +193,38 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  margin-top: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
 }
 
 .card {
-  padding: 24px;
-  background: #eaeaea;
+  background: #fff;
+  padding: 20px;
   border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
   text-decoration: none;
-  color: #000;
+  color: #333;
   font-size: 18px;
+  font-weight: bold;
 }
 
-/* MAPA */
-#mapa {
-  width: 100%;
-  height: 280px;
-  margin: 16px 0;
-  border-radius: 14px;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
 
-/* DESTINOS */
+/* GRID DESTINOS */
 .grid-destinos {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
 }
 
 .card-destino {
@@ -85,6 +233,13 @@ button {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-destino:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
 
 .card-destino img {
@@ -100,6 +255,7 @@ button {
 .card-destino h2 {
   font-size: 18px;
   margin: 0 0 6px;
+  color: #333;
 }
 
 .card-destino p {
@@ -108,12 +264,112 @@ button {
   color: #555;
 }
 
-/* 🖥️ TABLET */
-@media (min-width: 768px) {
-  h1 {
-    font-size: 32px;
-  }
+/* DETALHES */
+.detalhes-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
 
+.detalhes-header {
+  margin-bottom: 24px;
+}
+
+.detalhes-header img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.detalhes-info {
+  margin-bottom: 24px;
+}
+
+.detalhes-info h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.detalhes-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+#mapaDetalhes {
+  width: 100%;
+  height: 400px;
+  border-radius: 14px;
+  margin-top: 24px;
+}
+
+/* GALERIA DE FOTOS */
+.galeria-fotos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.card-foto {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card-foto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info-foto {
+  padding: 16px;
+}
+
+.descricao-foto {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 12px;
+  color: #000;
+}
+
+.detalhes-foto {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.preco {
+  background: #e8f5e9;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.dificuldade {
+  background: #fff3e0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #e65100;
+  font-weight: bold;
+}
+
+.avaliacao {
+  background: #fce4ec;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #c2185b;
+  font-weight: bold;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -122,54 +378,30 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  #mapa {
-    height: 360px;
+  .galeria-fotos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 32px;
   }
 }
 
-/* 🖥️ DESKTOP */
+/* DESKTOP */
 @media (min-width: 1024px) {
-  body {
-    padding: 32px;
-  }
-
   .cards {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .grid-destinos {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  #mapa {
-    max-width: 1100px;
-    margin: 24px auto;
+  .galeria-fotos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h1 {
+    font-size: 36px;
   }
 }
-
-/* TOP BAR */
-#topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 56px;
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  z-index: 1000;
-}
-
-.home-icon {
-  font-size: 22px;
-  text-decoration: none;
-  color: #000;
-}
-
-/* COMPENSA TOPO FIXO */
-body {
-  padding-top: 72px;
-}
-

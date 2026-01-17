@@ -10,7 +10,33 @@
             "descricao": "Praia urbana com calçadão e quiosques.",
             "lat": -8.1203,
             "lng": -34.8946,
-            "foto": "assets/images/recife/boa-viagem.jpg"
+            "foto": "assets/images/recife/praia/boa-viagem.jpg",
+            "preco": "150",
+            "dificuldade": "Fácil",
+            "avaliacao": 5,
+            "fotos": [
+              {
+                "src": "assets/images/recife/praia/restaurante-mar-e-terra.jpg",
+                "descricao": "Lagosta grelhada com acompanhamentos",
+                "preco": "150",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/recife/praia/restaurante-mar-e-terra-2.jpg",
+                "descricao": "Prato principal - Moqueca de peixe",
+                "preco": "120",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/recife/praia/restaurante-mar-e-terra-3.jpg",
+                "descricao": "Sobremesa - Pavê de frutas",
+                "preco": "45",
+                "dificuldade": "Fácil",
+                "avaliacao": 4
+              }
+            ]
           }
         ]
       }
@@ -22,31 +48,126 @@
         "praia": [
           {
             "nome": "Praia de Tabatinga I",
-            "descricao": "Praia em meio de reserva.",
-            "lat": -8.1203,
-            "lng": -34.8946,
-            "foto": "assets/images/conde/tabatinga1.jpg"
+            "descricao": "Tabatinga I é uma atração turística situada na Praia de Tabatinga, no município de Conde, litoral sul da Paraíba, Brasil. Conhecida por suas falésias coloridas e mar de águas mornas e cristalinas, é um dos destinos mais procurados por visitantes que exploram a Costa do Conde, famosa por seu conjunto de praias preservadas e paisagens naturais exuberantes.",
+            "lat": -7.31046,
+            "lng": -34.80178,
+            "foto": "assets/images/conde/praia/tabatinga-frente.jpg",
+            "preco": "150",
+            "dificuldade": "Fácil",
+            "avaliacao": 5,
+            "fotos": [
+                {
+                  "src": "assets/images/conde/praia/tabatinga1-frente2.jpg",
+                  "descricao": "Entrada principal na Praia de Tabatinga I",
+                  "preco": "0",
+                  "dificuldade": "Fácil",
+                  "avaliacao": 5
+                },
+              {
+                "src": "assets/images/conde/praia/tabatinga1-a.jpg",
+                "descricao": "Por do Sol na Praia de Tabatinga I",
+                "preco": "0",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/praia/tabatinga1-mar.jpg",
+                "descricao": "Mar na Praia Tabatinga I",
+                "preco": "",
+                "dificuldade": "Fácil",
+                "avaliacao": 4
+              }
+            ]
           },
             {
                 "nome": "Praia de Tabatinga II",
-                "descricao": "Praia com barracas e quiosques.",
-                "lat": -8.1203,
-                "lng": -34.8946,
-                "foto": "assets/images/conde/tabatinga2.jpg"
+                "descricao": "A Praia de Tabatinga II, no município do Conde (PB), é um dos trechos mais tranquilos e preservados do litoral sul da Paraíba. Ela é conhecida pelo visual selvagem e pouco urbanizado, com falésias coloridas, coqueiros espalhados e uma faixa de areia extensa e limpa. O mar costuma ter tons azul-esverdeados, variando conforme a maré. Na maré baixa, surgem piscinas naturais, ideais para banho calmo e para famílias; já na maré alta, o mar fica um pouco mais agitado, atraindo quem gosta de ondas.",
+                "lat": -7.31497,
+                "lng": -34.80251,
+                "foto": "assets/images/conde/praia/tabatinga2.jpg",
+                "fotos": [
+                {
+                    "src": "assets/images/conde/praia/tabatinga2-maceio.jpg",
+                    "descricao": "Maceio feito da Praia de Tabatinga II",
+                    "preco": "0",
+                    "dificuldade": "Fácil",
+                    "avaliacao": 5
+                },
+                {
+                    "src": "assets/images/conde/praia/tabatinga2-mar.jpg",
+                    "descricao": "Mar calmo na Praia de Tabatinga II",
+                    "preco": "0",
+                    "dificuldade": "Fácil",
+                    "avaliacao": 5
+                },
+                {
+                    "src": "assets/images/conde/praia/tabatinga2-frente.jpg",
+                    "descricao": "Muita tranquilidade na Praia de Tabatinga II",
+                    "preco": "0",
+                    "dificuldade": "Fácil",
+                    "avaliacao": 4
+                }
+            ]
             },
             {
                 "nome": "Praia do Coqueirinho",
-                "descricao": "Praia com falésias e coqueiros.",
-                "lat": -8.1203,
-                "lng": -34.8946,
-                "foto": "assets/images/conde/coqueirinho.jpg"
+                "descricao": "A Praia de Coqueirinho, no município do Conde (PB), é uma das praias mais bonitas e conhecidas do litoral sul da Paraíba. Ela se destaca pelas falésias altas e coloridas, coqueiros espalhados pela orla e um mar de águas claras, que variam entre tons de azul e verde.",
+                "lat": -7.328290,
+                "lng": -34.795509,
+                "foto": "assets/images/conde/praia/coqueirinho.jpg",
+                "fotos": [
+                {
+                    "src": "assets/images/conde/praia/coqueirinho-alto.jpg",
+                    "descricao": "Vista aérea da Praia do Coqueirinho",
+                    "preco": "0",
+                    "dificuldade": "Fácil",
+                    "avaliacao": 5
+                },
+                {
+                    "src": "assets/images/conde/praia/coqueirinho2.jpg",
+                    "descricao": "Mar claro e coqueiros na Praia do Coqueirinho",
+                    "preco": "0",
+                    "dificuldade": "Fácil",
+                    "avaliacao": 5
+                },
+                {
+                    "src": "assets/images/conde/praia/coqueirinho3.jpg",
+                    "descricao": "Estrutura com bares e restaurantes na Praia do Coqueirinho",
+                    "preco": "0",
+                    "dificuldade": "Fácil",
+                    "avaliacao": 4
+                }
+            ]
             },
             {
                 "nome": "Praia de Jacumã",
-                "descricao": "Praia com piscinas naturais.",
-                "lat": -8.1203,
-                "lng": -34.8946,
-                "foto": "assets/images/conde/jacuma.jpg"
+                "descricao": "A Praia de Jacumã, no município do Conde (PB), é uma praia urbana e bem estruturada, conhecida pelo mar geralmente calmo, areia clara e fácil acesso. É ideal para banho, famílias e esportes aquáticos, como caiaque e stand up paddle.",
+                "lat": -7.2654,
+                "lng": -34.809,
+                "foto": "assets/images/conde/praia/jacuma.jpg",
+                "fotos": [
+                {
+                    "src": "assets/images/conde/praia/jacuma2.jpg",
+                    "descricao": "Vista aérea praia Jacumã",
+                    "preco": "10",
+                    "dificuldade": "Fácil",
+                    "avaliacao": 3
+                },
+                {
+                    "src": "assets/images/conde/praia/jacuma3.jpg",
+                    "descricao": "Letreiro na praia de Jacumã",
+                    "preco": "0",
+                    "dificuldade": "Fácil",
+                    "avaliacao": 3
+                },
+                {
+                    "src": "assets/images/conde/praia/jacuma4.jpg",
+                    "descricao": "Calçadão Praia de Jacumã",
+                    "preco": "0",
+                    "dificuldade": "Fácil",
+                    "avaliacao": 3
+                }
+                ]
             }
         ],
         "passeio": [
@@ -55,37 +176,268 @@
             "descricao": "Passeio de buggy pelas praias da região.",
             "lat": -8.1203,
             "lng": -34.8946,
-            "foto": "assets/images/conde/buggy.jpg"
+            "foto": "assets/images/conde/passeio/buggy.jpg",
+            "preco": "150",
+            "dificuldade": "Fácil",
+            "avaliacao": 5,
+            "fotos": [
+              {
+                "src": "assets/images/conde/passeio/restaurante-mar-e-terra.jpg",
+                "descricao": "Lagosta grelhada com acompanhamentos",
+                "preco": "150",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/passeio/restaurante-mar-e-terra-2.jpg",
+                "descricao": "Prato principal - Moqueca de peixe",
+                "preco": "120",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/passeio/restaurante-mar-e-terra-3.jpg",
+                "descricao": "Sobremesa - Pavê de frutas",
+                "preco": "45",
+                "dificuldade": "Fácil",
+                "avaliacao": 4
+              }
+            ]
           },
           {
             "nome": "Trilha Ecológica",
             "descricao": "Caminhada por trilhas na mata atlântica.",
             "lat": -8.1203,
             "lng": -34.8946,
-            "foto": "assets/images/conde/trilha.jpg"
+            "foto": "assets/images/conde/passeio/trilha.jpg",
+            "preco": "150",
+            "dificuldade": "Fácil",
+            "avaliacao": 5,
+            "fotos": [
+              {
+                "src": "assets/images/conde/passeio/restaurante-mar-e-terra.jpg",
+                "descricao": "Lagosta grelhada com acompanhamentos",
+                "preco": "150",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/passeio/restaurante-mar-e-terra-2.jpg",
+                "descricao": "Prato principal - Moqueca de peixe",
+                "preco": "120",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/passeio/restaurante-mar-e-terra-3.jpg",
+                "descricao": "Sobremesa - Pavê de frutas",
+                "preco": "45",
+                "dificuldade": "Fácil",
+                "avaliacao": 4
+              }
+            ]
           },
           {
             "nome": "Visita à Vila de Pescadores",
             "descricao": "Conheça a cultura local visitando a vila de pescadores.",
             "lat": -8.1203,
             "lng": -34.8946,
-            "foto": "assets/images/conde/vila-pescadores.jpg"
+            "foto": "assets/images/conde/passeio/vila-pescadores.jpg",
+            "preco": "150",
+            "dificuldade": "Fácil",
+            "avaliacao": 5,
+            "fotos": [
+              {
+                "src": "assets/images/conde/passeio/restaurante-mar-e-terra.jpg",
+                "descricao": "Lagosta grelhada com acompanhamentos",
+                "preco": "150",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/passeio/restaurante-mar-e-terra-2.jpg",
+                "descricao": "Prato principal - Moqueca de peixe",
+                "preco": "120",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/passeio/restaurante-mar-e-terra-3.jpg",
+                "descricao": "Sobremesa - Pavê de frutas",
+                "preco": "45",
+                "dificuldade": "Fácil",
+                "avaliacao": 4
+              }
+            ]
           }
         ],
-         "restaurantes": [
+        "restaurantes": [
           {
             "nome": "Restaurante Mar e Terra",
-            "descricao": "Culinária regional com frutos do mar frescos.",
+            "descricao": "Restaurante especializado em frutos do mar com vista para o mar.",
             "lat": -8.1203,
             "lng": -34.8946,
-            "foto": "assets/images/conde/restaurante-mar-e-terra.jpg"
+            "foto": "assets/images/conde/restaurante/restaurante-mar-e-terra.jpg",
+            "preco": "150",
+            "dificuldade": "Fácil",
+            "avaliacao": 5,
+            "fotos": [
+              {
+                "src": "assets/images/conde/restaurante/restaurante-mar-e-terra.jpg",
+                "descricao": "Lagosta grelhada com acompanhamentos",
+                "preco": "150",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/restaurante/restaurante-mar-e-terra-2.jpg",
+                "descricao": "Prato principal - Moqueca de peixe",
+                "preco": "120",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/restaurante/restaurante-mar-e-terra-3.jpg",
+                "descricao": "Sobremesa - Pavê de frutas",
+                "preco": "45",
+                "dificuldade": "Fácil",
+                "avaliacao": 4
+              }
+            ]
           },
           {
             "nome": "Restaurante Turek",
             "descricao": "Comida típica nordestina em ambiente acolhedor.",
             "lat": -8.1203,
             "lng": -34.8946,
-            "foto": "assets/images/conde/restaurante-turek.jpg"
+            "foto": "assets/images/conde/restaurante/restaurante-turek.jpg",
+            "preco": "150",
+            "dificuldade": "Fácil",
+            "avaliacao": 5,
+            "fotos": [
+              {
+                "src": "assets/images/conde/restaurante/restaurante-mar-e-terra.jpg",
+                "descricao": "Lagosta grelhada com acompanhamentos",
+                "preco": "150",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/restaurante/restaurante-mar-e-terra-2.jpg",
+                "descricao": "Prato principal - Moqueca de peixe",
+                "preco": "120",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/restaurante/restaurante-mar-e-terra-3.jpg",
+                "descricao": "Sobremesa - Pavê de frutas",
+                "preco": "45",
+                "dificuldade": "Fácil",
+                "avaliacao": 4
+              }
+            ]
+          }
+        ],
+        "Apoio": [
+          {
+            "nome": "Hospital Municipal de Conde",
+            "descricao": "Restaurante especializado em frutos do mar com vista para o mar.",
+            "lat": -8.1203,
+            "lng": -34.8946,
+            "foto": "assets/images/conde/apoio/restaurante-mar-e-terra.jpg",
+            "preco": "150",
+            "dificuldade": "Fácil",
+            "avaliacao": 5,
+            "fotos": [
+              {
+                "src": "assets/images/conde/apoio/restaurante-mar-e-terra.jpg",
+                "descricao": "Lagosta grelhada com acompanhamentos",
+                "preco": "150",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/apoio/restaurante-mar-e-terra-2.jpg",
+                "descricao": "Prato principal - Moqueca de peixe",
+                "preco": "120",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/apoio/restaurante-mar-e-terra-3.jpg",
+                "descricao": "Sobremesa - Pavê de frutas",
+                "preco": "45",
+                "dificuldade": "Fácil",
+                "avaliacao": 4
+              }
+            ]
+          },
+           {
+            "nome": "Lavanderia Jacuma",
+            "descricao": "Restaurante especializado em frutos do mar com vista para o mar.",
+            "lat": -8.1203,
+            "lng": -34.8946,
+            "foto": "assets/images/conde/apoio/restaurante-mar-e-terra.jpg",
+            "preco": "150",
+            "dificuldade": "Fácil",
+            "avaliacao": 5,
+            "fotos": [
+              {
+                "src": "assets/images/conde/apoio/restaurante-mar-e-terra.jpg",
+                "descricao": "Lagosta grelhada com acompanhamentos",
+                "preco": "150",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/apoio/restaurante-mar-e-terra-2.jpg",
+                "descricao": "Prato principal - Moqueca de peixe",
+                "preco": "120",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/apoio/restaurante-mar-e-terra-3.jpg",
+                "descricao": "Sobremesa - Pavê de frutas",
+                "preco": "45",
+                "dificuldade": "Fácil",
+                "avaliacao": 4
+              }
+            ]
+          },
+          {
+            "nome": "Caixa 24 horas Jacuma",
+            "descricao": "Comida típica nordestina em ambiente acolhedor.",
+            "lat": -8.1203,
+            "lng": -34.8946,
+            "foto": "assets/images/conde/apoio/restaurante-turek.jpg",
+            "preco": "150",
+            "dificuldade": "Fácil",
+            "avaliacao": 5,
+            "fotos": [
+              {
+                "src": "assets/images/conde/apoio/restaurante-mar-e-terra.jpg",
+                "descricao": "Lagosta grelhada com acompanhamentos",
+                "preco": "150",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/apoio/restaurante-mar-e-terra-2.jpg",
+                "descricao": "Prato principal - Moqueca de peixe",
+                "preco": "120",
+                "dificuldade": "Fácil",
+                "avaliacao": 5
+              },
+              {
+                "src": "assets/images/conde/apoio/restaurante-mar-e-terra-3.jpg",
+                "descricao": "Sobremesa - Pavê de frutas",
+                "preco": "45",
+                "dificuldade": "Fácil",
+                "avaliacao": 4
+              }
+            ]
           }
         ]
       }
