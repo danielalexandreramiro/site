@@ -11,7 +11,6 @@
 <body>
 <nav class="navbar">
   <div class="navbar-container">
-    <a href="index.html" class="navbar-logo">🏠 Destinos</a>
     <button class="hamburger" id="hamburger">
       <span></span>
       <span></span>
@@ -24,7 +23,10 @@
   </div>
 </nav>
 
-  <h1 id="tituloCidade"></h1>
+  <h1 style="text-align: center; padding: 20px;" id="tituloCidade"></h1>
+
+   <h2 style="text-align: center; padding: 20px;">Categorias</h2>
+  <div class="cards" id="tiposContainer"></div>
 
   <div class="cidade-container">
     <div class="mapa-wrapper">
@@ -52,8 +54,7 @@
     </div>
   </div>
 
-  <h2 style="text-align: center; padding: 20px;">Categorias</h2>
-  <div class="cards" id="tiposContainer"></div>
+ 
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="assets/js/app.js"></script>

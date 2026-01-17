@@ -231,7 +231,7 @@
             ]
           }
         ],
-        "restaurantes": [
+        "restaurante": [
           {
             "nome": "Restaurante Mar e Terra",
             "descricao": "Restaurante especializado em frutos do mar com vista para o mar.",
